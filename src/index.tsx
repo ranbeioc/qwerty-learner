@@ -53,7 +53,6 @@ function Root() {
         <Suspense fallback={<Loading />}>
           <Routes>
             {isMobile ? (
-              <Route path="/*" element={<Navigate to="/mobile" />} />
             ) : (
               <>
                 <Route index element={<TypingPage />} />
@@ -63,7 +62,6 @@ function Root() {
                 <Route path="/*" element={<Navigate to="/" />} />
               </>
             )}
-            <Route path="/mobile" element={<MobilePage />} />
           </Routes>
         </Suspense>
       </BrowserRouter>
