@@ -47,27 +47,7 @@ function Root() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  return (
-    <React.StrictMode>
-      <BrowserRouter basename={REACT_APP_DEPLOY_ENV === 'pages' ? '/qwerty-learner' : ''}>
-        <Suspense fallback={<Loading />}>
-          <Routes>
-            {isMobile ? (
-            ) : (
-              <>
-                <Route index element={<TypingPage />} />
-                <Route path="/gallery" element={<GalleryPage />} />
-                <Route path="/analysis" element={<AnalysisPage />} />
-                <Route path="/error-book" element={<ErrorBook />} />
-                <Route path="/*" element={<Navigate to="/" />} />
-              </>
-            )}
-          </Routes>
-        </Suspense>
-      </BrowserRouter>
-      <Analytics />
-    </React.StrictMode>
-  )
+
 }
 
 const container = document.getElementById('root')
