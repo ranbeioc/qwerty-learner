@@ -46,7 +46,7 @@ function Root() {
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
   }, [])
-  
+
   return (
     <React.StrictMode>
       <BrowserRouter basename={REACT_APP_DEPLOY_ENV === 'pages' ? '/qwerty-learner' : ''}>
@@ -71,8 +71,6 @@ function Root() {
       <Analytics />
     </React.StrictMode>
   )
-}
-
 }
 
 const container = document.getElementById('root')
